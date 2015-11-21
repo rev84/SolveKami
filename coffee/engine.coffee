@@ -48,7 +48,7 @@ window.boardRedraw = ->
     tr = $('<tr>')
     for y in [0...yoko]
       tr.append(
-        $('<td>').addClass('colora cell center').attr('value', 1)
+        $('<td>').addClass('colora cell center').attr('value', a)
       )
     $('#board').append tr
   $('#board td').on 'mouseover', (e)->
