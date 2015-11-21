@@ -24,7 +24,7 @@
       turn = Number($('#turn').val());
       res = Kami.solve(b, turn);
       if (res === false) {
-        $('#message').html('解答はありませんでした。');
+        $('#message').html('NO ANSWER');
       } else {
         $('#message').html('');
         results = [];

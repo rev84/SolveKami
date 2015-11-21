@@ -27,7 +27,7 @@ $ ->
     res = Kami.solve b, turn
     # 解答が不正
     if res is false
-      $('#message').html('解答はありませんでした。')
+      $('#message').html('NO ANSWER')
       return
     else
       $('#message').html('')
