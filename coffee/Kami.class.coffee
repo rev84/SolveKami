@@ -14,6 +14,10 @@ class window.Kami
     colors = @board2colors board
     nodes = @board2node board
 
+    # ノードを広い順にソートする
+    nodes.sort ->
+      b.path.length - a.path.length 
+
     # 全ノードを対象に
     for node in nodes
       myColor = node.color
