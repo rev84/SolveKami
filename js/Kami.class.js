@@ -20,7 +20,7 @@
       }
       colors = this.board2colors(board);
       nodes = this.board2node(board);
-      nodes.sort(function() {
+      nodes.sort(function(a, b) {
         return b.path.length - a.path.length;
       });
       for (i = 0, len = nodes.length; i < len; i++) {

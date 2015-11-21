@@ -15,7 +15,7 @@ class window.Kami
     nodes = @board2node board
 
     # ノードを広い順にソートする
-    nodes.sort ->
+    nodes.sort (a, b)->
       b.path.length - a.path.length 
 
     # 全ノードを対象に
