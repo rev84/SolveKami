@@ -51,7 +51,7 @@
     for (t = j = 0, ref = tate; 0 <= ref ? j < ref : j > ref; t = 0 <= ref ? ++j : --j) {
       tr = $('<tr>');
       for (y = k = 0, ref1 = yoko; 0 <= ref1 ? k < ref1 : k > ref1; y = 0 <= ref1 ? ++k : --k) {
-        tr.append($('<td>').addClass('colora cell center').attr('value', a));
+        tr.append($('<td>').addClass('colora cell center').attr('value', 'a'));
       }
       $('#board').append(tr);
     }
