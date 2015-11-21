@@ -1,1 +1,1 @@
-coffee -o js -wcb coffee
+coffee -o js -wc coffee
