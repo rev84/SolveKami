@@ -32,7 +32,7 @@
           ref1 = res[index], color = ref1[0], path = ref1[1];
           x = path[0], y = path[1];
           td = $('#board tr').eq(x).children('td').eq(y);
-          results.push($(td).html($(td).html() + '<br>(' + (index + 1) + ')' + color));
+          results.push($(td).html($(td).html() + '<br>[' + (index + 1) + ']' + color));
         }
         return results;
       }
@@ -51,7 +51,7 @@
     for (t = j = 0, ref = tate; 0 <= ref ? j < ref : j > ref; t = 0 <= ref ? ++j : --j) {
       tr = $('<tr>');
       for (y = k = 0, ref1 = yoko; 0 <= ref1 ? k < ref1 : k > ref1; y = 0 <= ref1 ? ++k : --k) {
-        tr.append($('<td>').addClass('color1 cell').attr('value', 1));
+        tr.append($('<td>').addClass('colora cell center').attr('value', 1));
       }
       $('#board').append(tr);
     }
@@ -62,7 +62,7 @@
       }
       value = $("input[name='color']:checked").val();
       $(this).attr('value', value);
-      $(this).removeClass('color1 color2 color3 color4 color5 color6');
+      $(this).removeClass('colora colorb colorc colord colore colorf');
       return $(this).addClass('color' + value);
     });
   };
@@ -77,7 +77,7 @@
       tds = $(tr).children('td');
       for (k = 0, len1 = tds.length; k < len1; k++) {
         td = tds[k];
-        y.push(Number($(td).attr('value')));
+        y.push($(td).attr('value'));
       }
       x.push(y);
     }

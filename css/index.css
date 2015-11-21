@@ -12,23 +12,29 @@ body {
   width:50px;
   height:50px;
 }
-.color1 {
+.pallet {
+  width:50px;
+  height:80px;
+  font-size:30px;
+  font-weight:bold;
+}
+.colora {
   background-color:#ff7f50;
 }
-.color2 {
+.colorb {
   background-color:#ffff00;
 }
-.color3 {
+.colorc {
   background-color:#ff69b4;
 }
-.color4 {
+.colord {
   background-color:#00ff00;
 }
-.color5 {
+.colore {
   background-color:#00ffff;
 }
-.color6 {
-  background-color:#ffa500;
+.colorf {
+  background-color:#ff0000;
 }
 input[type=radio] {
   width: 30px;
@@ -42,4 +48,9 @@ input[type=radio] {
 }
 select {
   font-size:30px;
+}
+#message {
+  font-size:40px;
+  color:#ff0000;
+  font-weight:bold;
 }

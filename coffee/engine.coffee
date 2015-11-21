@@ -35,7 +35,7 @@ $ ->
         [color, path] = res[index]
         [x, y] = path
         td = $('#board tr').eq(x).children('td').eq(y)
-        $(td).html($(td).html()+'<br>('+(index+1)+')'+color)
+        $(td).html($(td).html()+'<br>['+(index+1)+']'+color)
 
 window.isMouseDown = false
 window.count = 0
@@ -48,14 +48,14 @@ window.boardRedraw = ->
     tr = $('<tr>')
     for y in [0...yoko]
       tr.append(
-        $('<td>').addClass('color1 cell').attr('value', 1)
+        $('<td>').addClass('colora cell center').attr('value', 1)
       )
     $('#board').append tr
   $('#board td').on 'mouseover', (e)->
     return if not window.isMouseDown
     value = $("input[name='color']:checked").val()
     $(this).attr 'value', value
-    $(this).removeClass 'color1 color2 color3 color4 color5 color6'
+    $(this).removeClass 'colora colorb colorc colord colore colorf'
     $(this).addClass 'color'+value
 
 window.getBoard = ->
@@ -65,6 +65,6 @@ window.getBoard = ->
     y = []
     tds = $(tr).children('td')
     for td in tds
-      y.push Number($(td).attr 'value')
+      y.push $(td).attr 'value'
     x.push y
   x
